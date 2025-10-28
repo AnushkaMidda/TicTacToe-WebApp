@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe - Neon Gamer Edition</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="light">
+
+    <!-- 🎵 Intro Screen -->
+    <div id="intro-screen" class="intro fade-in">
+      <div class="curtain" id="curtain-left"></div>
+      <div class="curtain" id="curtain-right"></div>
+      <div class="intro-content">
+        <h1 class="game-title">🎮 TIC TAC TOE</h1>
+        <button id="start-btn" class="start-btn">Tap to Start</button>
+      </div>
+    </div>
+    
+    <!-- 🧠 Mode Selection Screen -->
+    <div id="mode-screen" class="hidden screen fade">
+      <button class="back-btn" id="mode-back">⬅️ Back</button>
+      <h2 class="screen-title">Choose Game Mode</h2>
+
+      <div class="option-group">
+        <label><input type="radio" name="mode" value="computer" checked /> Play vs Computer</label>
+        <label><input type="radio" name="mode" value="player" /> Two Players</label>
+      </div>
+
+      <button id="mode-next" class="next-btn">Next ➡️</button>
+    </div>
+
+    <!-- 👤 Username Input Screen -->
+    <div id="username-screen" class="hidden screen fade">
+      <button class="back-btn" id="username-back">⬅️ Back</button>
+      <h2 class="screen-title">Enter Player Name(s)</h2>
+
+      <div class="input-group">
+        <div class="player1-field">
+          <label for="player1-name">Player 1 Name:</label>
+          <input type="text" id="player1-name" placeholder="Enter Player 1 Name" />
+        </div>
+
+        <div class="player2-field">
+          <label for="player2-name">Player 2 Name:</label>
+          <input type="text" id="player2-name" placeholder="Enter Player 2 Name" />
+        </div>
+      </div>
+
+      <button id="username-next" class="next-btn">Next ➡️</button>
+    </div>
+
+    <!-- 🧠 Difficulty Selection Screen -->
+    <div id="difficulty-screen" class="hidden screen fade">
+      <button class="back-btn" id="difficulty-back">⬅️ Back</button>
+      <h2 class="screen-title">Choose Difficulty Level</h2>
+
+      <div class="option-group">
+        <label><input type="radio" name="difficulty" value="easy" checked /> 🟢 Easy</label>
+        <label><input type="radio" name="difficulty" value="moderate" /> 🟡 Moderate</label>
+        <label><input type="radio" name="difficulty" value="hard" /> 🔴 Hard</label>
+      </div>
+
+      <button id="difficulty-next" class="next-btn">Start Game 🎮</button>
+    </div>
+
+    <!-- 🎯 Game Section -->
+    <div id="game-root" class="game hidden fade">
+      <div class="top-bar">
+        <button id="back-to-main" class="back-btn">⬅️ Back</button>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+      </div>
+
+      <h2 id="status" class="status">Player X's turn</h2>
+
+      <div class="board" id="board">
+        <div class="cell" cellIndex="0"></div>
+        <div class="cell" cellIndex="1"></div>
+        <div class="cell" cellIndex="2"></div>
+        <div class="cell" cellIndex="3"></div>
+        <div class="cell" cellIndex="4"></div>
+        <div class="cell" cellIndex="5"></div>
+        <div class="cell" cellIndex="6"></div>
+        <div class="cell" cellIndex="7"></div>
+        <div class="cell" cellIndex="8"></div>
+        <div id="win-line"></div>
+      </div>
+
+      <!-- 🧮 Scoreboard -->
+      <div id="scoreboard" class="scoreboard">
+        <p id="score-text">Score — X: 0 | O: 0</p>
+      </div>
+
+      <button id="restart" class="restart-btn">Restart Game</button>
+    </div>
+
+    <!-- 🏆 Result Overlay -->
+    <div id="result-overlay" class="overlay hidden fade">
+      <div class="result-box">
+        <img id="result-gif" src="" alt="result animation" class="result-gif" />
+        <h2 id="result-text"></h2>
+        <div class="result-actions">
+          <button id="play-again" class="again-btn">Play Again</button>
+          <button id="close-result" class="close-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🚀 Special Unlock Overlay -->
+    <div id="unlock-overlay" class="overlay hidden fade">
+      <div class="unlock-box">
+        <h2 class="unlock-title">🏆 Congratulations!</h2>
+        <p class="unlock-message">You’ve unlocked the <strong>Special Level</strong> 🔥</p>
+        <button id="enter-hard-mode" class="next-btn">Enter Hard Mode 🎮</button>
+      </div>
+    </div>
+
+    <!-- 🔊 Sounds -->
+    <audio id="intro-audio" src="sounds/gameIntro.mp3"></audio>
+    <audio id="click-audio" src="sounds/click.mp3"></audio>
+    <audio id="win-audio" src="sounds/win.mp3"></audio>
+    <audio id="draw-audio" src="sounds/draw.mp3"></audio>
+    <audio id="open-audio" src="sounds/open.mp3" loop></audio>
+    <audio id="hard-audio" src="sounds/hard.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
