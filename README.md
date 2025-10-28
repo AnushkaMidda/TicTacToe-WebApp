@@ -141,7 +141,7 @@ This project showcases modern front-end creativity and can serve as both a **por
 ## 🔗 Live Demo (to be added)
 
 When deployed, you can add your project’s live link here 👉
-🔗 **[Play the Game](https://your-github-username.github.io/TicTacToe-WebApp/)**
+🔗 **[Play the Game]https://anushkamidda.github.io/TicTacToe-WebApp/**
 
 ---
 
